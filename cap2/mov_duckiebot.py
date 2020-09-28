@@ -62,10 +62,18 @@ while True:
     # Esto es avanzar recto hacia adelante al apretar la tecla w
     if key == ord('w'):
         action = np.array([0.44, 0.0])
-
-    ### AGREGAR MÁS COMPORTAMIENTOS ###
-
-
+    # Esto es retroceder recto hacia atras al apretar la tecla s
+    if key == ord('s'):
+        action = np.array([-0.44, 0.0])
+    # Esto es doblar hacia la izquierda al apretar la tecla a
+    if key == ord('a'):
+        action = np.array([0.0, 0.30])
+    # Esto es doblar hacia la derecha al apretar la tecla d
+    if key == ord('w'):
+        action = np.array([0.0, 0.30])
+    # Esto es un freno de emergencia al apretar la tecla espacio
+    if key == ord('32'):
+        action = np.array([0.0, 0.0])
 
     # Se ejecuta la acción definida anteriormente y se retorna la observación (obs),
     # la evaluación (reward), etc
